@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
-  firebaseConfig: {
-    apiKey: "AIzaSyA-SxXprIZujKXNXNZM11wBEI-3le8h7wo",
-    authDomain: "app-bibliotech-final.firebaseapp.com",
-    projectId: "app-bibliotech-final",
-    storageBucket: "app-bibliotech-final.appspot.com",
-    messagingSenderId: "771898285724",
-    appId: "1:771898285724:web:fc30d07dba2fb60cb15759"
+  firebaseConfig:{
+    apiKey: "AIzaSyByb4_ad2U664x7AIBHgtzSdOx3vgcv0mw",
+    authDomain: "app-bibliotech-fede3.firebaseapp.com",
+    projectId: "app-bibliotech-fede3",
+    storageBucket: "app-bibliotech-fede3.appspot.com",
+    messagingSenderId: "792083305182",
+    appId: "1:792083305182:web:f646ab0b0a06022504284f"
   }
 };

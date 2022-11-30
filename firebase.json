@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist\\app-bibliotech",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
