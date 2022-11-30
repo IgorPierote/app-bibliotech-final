@@ -1,0 +1,47 @@
+Body{
+    background-color:rgb(218, 230, 200)
+}
+.full-width {
+    width: 100%;
+    
+}
+
+.double-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.double-width .full-width {
+    width: 48%;
+}
+
+.btn-submit {
+    margin-top: 30px;
+    background-color: rgba(129, 185, 104, 0.968);
+    color: #FFFFFF;
+}
+
+.btn-submit:hover {
+    background-color:rgba(119, 245, 60, 0.968);
+cursor: pointer;
+}
+
+.upload-photo {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #bababa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-photo::-webkit-file-upload-button {
+    display: none;
+}
+
+mat-toolbar img {
+    position: fixed;
+    margin-left:180px;
+    width: 50px;
+    filter: drop-shadow(0 0 15px rgba(253, 253, 253, 0.957));
+}

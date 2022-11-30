@@ -1,0 +1,33 @@
+.container {
+    width: clamp(300px, 100%, 1200px);
+    margin: 30px auto 0;
+}
+
+.home-container h1 {
+    width:100%;
+    font-size: 3vh;
+    position:absolute;
+    text-align: center;
+    
+
+}
+
+mat-toolbar {
+    display: flex;
+    align-items: center;
+    background-color: #FA8BFF;
+    /*background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);*/
+
+
+}
+
+mat-toolbar span {
+    color:black;
+
+}
+
+mat-toolbar img {
+    margin-left:70px;
+    width: 50px;
+    filter: drop-shadow(0 0 15px rgba(253, 253, 253, 0.957));
+}

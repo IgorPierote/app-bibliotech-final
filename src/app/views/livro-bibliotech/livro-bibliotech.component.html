@@ -1,0 +1,84 @@
+<app-header></app-header>
+<mat-toolbar 
+><span>BIBLIOTECH</span>
+    <img src="../../../assets/icons/icons8-books-64.png" alt="Painel">
+  </mat-toolbar>
+<body>
+<div class="container">
+    <h1>Livros</h1>
+    <section class="table-container mat-elevation-z8" tabindex="0">
+        <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="Titulo">
+                <th mat-header-cell *matHeaderCellDef><strong>Titulo</strong></th>
+                <td mat-cell *matCellDef="let livro"> {{livro.titulo}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Categoria">
+                <th mat-header-cell *matHeaderCellDef><strong>Categoria</strong></th>
+                <td mat-cell *matCellDef="let livro"> {{livro.categoria}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Autor">
+                <th mat-header-cell *matHeaderCellDef><strong>Autor</strong></th>
+                <td mat-cell *matCellDef="let livro"> {{livro.autor}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Status">
+                <th mat-header-cell *matHeaderCellDef><strong>Status</strong></th>
+                <td mat-cell *matCellDef="let livro"> {{livro.status}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ISBN">
+                <th mat-header-cell *matHeaderCellDef><strong>ISBN</strong></th>
+                <td mat-cell *matCellDef="let livro"> {{livro.isbn}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="excluir">
+                <th mat-header-cell *matHeaderCellDef><strong>Excluir</strong></th>
+                <td mat-cell *matCellDef="let livro">
+                    <button mat-icon-button (click)="deleteLivro(livro.idlivro)">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </td>
+            </ng-container>           
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </section>
+</div>
+<div class="container-editar">
+    <form [formGroup]="formLivro">
+        <div class="double-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Titulo</mat-label>
+                <input type="text" matInput placeholder="Titulo" name="titulo" formControlName="titulo">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Autor</mat-label>
+                <input type="autor" matInput placeholder="Autor" name="autor" formControlName="autor" >
+            </mat-form-field>
+        </div>
+
+        <div class="double-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Categoria</mat-label>
+                <input type="text" matInput placeholder="Categoria" name="categoria" formControlName="categoria">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>ISBN</mat-label>
+                <input type="email" matInput placeholder="ISBN" name="isbn" formControlName="isbn" >
+            </mat-form-field>
+        </div>
+        <div class="double-width">
+            <label for="capa">Selecione uma foto</label>
+            <input type="file" class="upload-capa" (change)="uploadFile($event)"> 
+            <mat-progress-bar mode="indeterminate" *ngIf="isLoadUpLoad"></mat-progress-bar>        
+        <button class="full-width btn-submit" mat-raised-button (click)="createLivro()">Cadastrar</button>
+        </div>
+    </form>
+</div>
+</body>

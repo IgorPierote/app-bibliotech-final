@@ -1,0 +1,41 @@
+<app-header></app-header>
+<mat-toolbar 
+>
+    <img src="../../../assets/icons/icons8-sofa-64_1.png" alt="Painel">
+  </mat-toolbar>
+<body>
+<div class="container">
+    <h1>Editar Empréstimo</h1>
+    <form #formEdit="ngForm">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Livro</mat-label>
+            <input type="text" matInput placeholder="Livro" name="livro" [(ngModel)]="emprestimo.livro.titulo" required>
+        </mat-form-field>
+
+        <div class="full-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Leitor</mat-label>
+                <input type="text" matInput placeholder="Leitor" name="leitor" [(ngModel)]="emprestimo.leitor" required>
+            </mat-form-field>
+        </div>
+
+        <div>   
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input type="email" matInput placeholder="E-mail" name="email" [(ngModel)]="emprestimo.email" required>
+            </mat-form-field>
+        </div>
+
+        <div class="full-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Telefone</mat-label>
+                <input type="text" matInput placeholder="Telefone" name="telefone" [(ngModel)]="emprestimo.telefone" required>
+            </mat-form-field>
+        </div>        
+
+        <div class="full-width">
+            <button class="full-width btn-submit" mat-raised-button (click)="updateEmprestimo(formEdit)">Editar</button>
+        </div>
+    </form>
+</div>
+</body>

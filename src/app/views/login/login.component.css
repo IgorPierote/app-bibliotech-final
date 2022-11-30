@@ -1,0 +1,74 @@
+#login-container {
+    height: 100%;
+    width: 100%;
+    background: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../assets/Livrarias-2.png");
+
+    
+}
+
+#login-container h1 {
+    font-size: 30px;
+}
+
+.login-form {
+    width: clamp(300px, 90%, 800px);
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 30px 50px;
+    box-shadow: 0 0 30px #1d5d02;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form button {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(129, 185, 104, 0.968);
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px #255a25;
+}
+
+.login-form form {
+    width: 100%;
+}
+
+.login-form form input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #5e8042;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.login-form form button {
+    margin-top: 30px;
+}
+
+#login-container span {
+    margin-top: 25px;
+    color: #236b2d;
+}
+
+#login-container span a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2b7807;
+}
+
+.login-form input,
+.login-form button {
+    font-size: 17px;
+}
+.login-form button:hover {
+    background-color:rgba(119, 245, 60, 0.968);
+cursor: pointer;
+}

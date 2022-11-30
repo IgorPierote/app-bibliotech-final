@@ -1,0 +1,56 @@
+<app-header></app-header>
+<mat-toolbar 
+><span>BIBLIOTECH</span>
+    <img src="../../../assets/icons/icons8-sofa-64.png" alt="Painel">
+  </mat-toolbar>
+<body>
+<div class="container">
+    <h1>Novo Empréstimo</h1>
+    <form [formGroup]="formEmprestimo">
+
+        <div class="full-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Leitor</mat-label>
+                <input type="text" matInput placeholder="Leitor" formControlName="leitor">
+            </mat-form-field>
+        </div>
+
+        <div class="full-width">    
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input type="email" matInput placeholder="E-mail" formControlName="email">
+            </mat-form-field>
+        </div>
+
+        <div class="full-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Telefone</mat-label>
+                <input type="text" matInput placeholder="Telefone" formControlName="telefone">
+            </mat-form-field>
+        </div>
+        <div class="full-width">
+            <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Status</mat-label>
+            <select matNativeControl formControlName="status">
+                <option value="" disabled selected></option>
+                <option value="disponivel">Disponivel</option>
+                <option value="emprestado">Emprestado</option>
+            </select>
+        </mat-form-field>
+    </div>
+    <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Livros</mat-label>
+            <mat-select formControlName="livro">
+                <mat-option *ngFor="let livro of livros" [value]="livro">
+                {{livro.titulo}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> 
+        
+        <div class="full-width">
+            <button class="full-width btn-submit" mat-raised-button (click)="createEmprestimo()">Cadastrar</button>
+            
+        </div>
+    </form>
+</div>
+</body>
